@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="icon" href="/images/logo.ico">
   
-  <title>encodeURIComponent遇到的问题 | rookie-alin</title>
+  <title>uniapp开发遇到的问题 | rookie-alin</title>
   <meta name="author" content="rookie-alin" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -16,16 +16,16 @@
   
     <meta name="keywords" content="问题" />
   
-  <meta name="description" content="问题​		在做表单提交时项目经理反馈过来问题，说有时候提交不了。我当时觉得很奇怪，我本地是好的呀，怎么可能会提交不了呢，后来用了他给我的数据测试发现浏览器报错。 URIError: URI malformed ​	 原因和解决方法​		表单中包含一些浏览器敏感的关键词，例如：# , &amp; , &#x3D;，而导致报错的是 % ，是因为编码汉字是 % 开头的，多加一个 % 会导致 decodeURICo">
+  <meta name="description" content="base64格式问题​	用canvas会遇到保存图片的时候在h5上图片格式为base64 ​	下图为H5 ​	 而在app上uniapp会自动转换成uniapp自己的格式：_doc&#x2F;uniapp_temp_1657159017379&#x2F;canvas&#x2F;16571590508290.png 解决方法: 1234567891011let path &#x3D; plus.io.conv">
 <meta property="og:type" content="article">
-<meta property="og:title" content="encodeURIComponent遇到的问题">
-<meta property="og:url" content="http://example.com/share/url_question/index.html">
+<meta property="og:title" content="uniapp开发遇到的问题">
+<meta property="og:url" content="http://example.com/share/uniapp_question/index.html">
 <meta property="og:site_name" content="rookie-alin">
-<meta property="og:description" content="问题​		在做表单提交时项目经理反馈过来问题，说有时候提交不了。我当时觉得很奇怪，我本地是好的呀，怎么可能会提交不了呢，后来用了他给我的数据测试发现浏览器报错。 URIError: URI malformed ​	 原因和解决方法​		表单中包含一些浏览器敏感的关键词，例如：# , &amp; , &#x3D;，而导致报错的是 % ，是因为编码汉字是 % 开头的，多加一个 % 会导致 decodeURICo">
+<meta property="og:description" content="base64格式问题​	用canvas会遇到保存图片的时候在h5上图片格式为base64 ​	下图为H5 ​	 而在app上uniapp会自动转换成uniapp自己的格式：_doc&#x2F;uniapp_temp_1657159017379&#x2F;canvas&#x2F;16571590508290.png 解决方法: 1234567891011let path &#x3D; plus.io.conv">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/logo.ico">
-<meta property="article:published_time" content="2022-06-20T03:14:33.454Z">
-<meta property="article:modified_time" content="2022-07-07T01:43:51.166Z">
+<meta property="article:published_time" content="2022-07-07T01:35:29.768Z">
+<meta property="article:modified_time" content="2022-07-07T02:12:50.594Z">
 <meta property="article:author" content="rookie-alin">
 <meta property="article:tag" content="问题">
 <meta name="twitter:card" content="summary">
@@ -135,15 +135,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://example.com/share/url_question/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/share/uniapp_question/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">encodeURIComponent遇到的问题</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">uniapp开发遇到的问题</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2022-06-20T03:14:33.454Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-06-20</time></li>
+                <li><time datetime="2022-07-07T01:35:29.768Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-07-07</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">rookie-alin</span>
                 </li>
@@ -151,7 +151,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        1099
+                        633
                     
                     字
                 </li>
@@ -162,52 +162,28 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1657158231166"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1657159970594"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">原因和解决方法</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#base64%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">base64格式问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%98%E6%B5%B7%E5%B1%8F%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">刘海屏适配问题</span></a></li></ol>
                 </div>
             
             <hr />
-            <div itemprop="articleBody"><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>​		在做表单提交时项目经理反馈过来问题，说有时候提交不了。我当时觉得很奇怪，我本地是好的呀，怎么可能会提交不了呢，后来用了他给我的数据测试发现浏览器报错。<code> URIError: URI malformed</code></p>
-<p>​	</p>
-<h2 id="原因和解决方法"><a href="#原因和解决方法" class="headerlink" title="原因和解决方法"></a>原因和解决方法</h2><p>​		表单中包含一些浏览器敏感的关键词，例如：<code># , &amp; , =</code>，而导致报错的是 <code>%</code> ，是因为编码汉字是 % 开头的，多加一个 % 会导致 decodeURIComponent 执行报错</p>
-<p>​		那么这里的解决方法就是把用到的敏感关键词进行转译编码</p>
-<p>​	</p>
-<table>
-<thead>
-<tr>
-<th>特殊字符</th>
-<th>含义</th>
-<th>编码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>%</td>
-<td>指定特殊字符</td>
-<td>%25</td>
-</tr>
-<tr>
-<td>#</td>
-<td>表示锚点</td>
-<td>%23</td>
-</tr>
-<tr>
-<td>&amp;</td>
-<td>URL Search分隔符</td>
-<td>%26</td>
-</tr>
-<tr>
-<td>&#x3D;</td>
-<td>URL中指定参数的值</td>
-<td>%3D</td>
-</tr>
-</tbody></table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对查询关键字中的特殊字符进行编码</span></span><br><span class="line">  <span class="title function_">encodeSearchKey</span>(<span class="params">str</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> encodeArr = [&#123;</span><br><span class="line">      <span class="attr">code</span>: <span class="string">&#x27;%&#x27;</span>,</span><br><span class="line">      <span class="attr">encode</span>: <span class="string">&#x27;%25&#x27;</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="attr">code</span>: <span class="string">&#x27;?&#x27;</span>,</span><br><span class="line">      <span class="attr">encode</span>: <span class="string">&#x27;%3F&#x27;</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="attr">code</span>: <span class="string">&#x27;#&#x27;</span>,</span><br><span class="line">      <span class="attr">encode</span>: <span class="string">&#x27;%23&#x27;</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="attr">code</span>: <span class="string">&#x27;&amp;&#x27;</span>,</span><br><span class="line">      <span class="attr">encode</span>: <span class="string">&#x27;%26&#x27;</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="attr">code</span>: <span class="string">&#x27;=&#x27;</span>,</span><br><span class="line">      <span class="attr">encode</span>: <span class="string">&#x27;%3D&#x27;</span></span><br><span class="line">    &#125;];</span><br><span class="line">    <span class="keyword">return</span> str.<span class="title function_">replace</span>(<span class="regexp">/[%?#&amp;=]/g</span>, <span class="function">(<span class="params">item, index, str</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">const</span> k <span class="keyword">of</span> encodeArr) &#123;</span><br><span class="line">        <span class="keyword">if</span> (k.<span class="property">code</span> === item) &#123;</span><br><span class="line">          <span class="keyword">return</span> k.<span class="property">encode</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+            <div itemprop="articleBody"><h2 id="base64格式问题"><a href="#base64格式问题" class="headerlink" title="base64格式问题"></a>base64格式问题</h2><p>​	用canvas会遇到保存图片的时候在h5上图片格式为base64</p>
+<p>​	下图为H5</p>
+<p>​	<img src="/../../images/uni_base.png"></p>
+<p>而在app上uniapp会自动转换成uniapp自己的格式：_doc&#x2F;uniapp_temp_1657159017379&#x2F;canvas&#x2F;16571590508290.png</p>
+<p>解决方法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> path = plus.<span class="property">io</span>.<span class="title function_">convertLocalFileSystemURL</span>(res); </span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">url</span> =  <span class="string">&#x27;file://&#x27;</span>+  path </span><br><span class="line"> uni.<span class="title function_">uploadFile</span>(&#123;</span><br><span class="line">     <span class="attr">url</span>: <span class="string">&#x27;上传文件接口&#x27;</span>, </span><br><span class="line">      <span class="attr">filePath</span>:  <span class="variable language_">this</span>.<span class="property">url</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;file&#x27;</span>,</span><br><span class="line">      <span class="attr">success</span>: <span class="function">(<span class="params">uploadFileRes</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(uploadFileRes.<span class="property">data</span>);</span><br><span class="line">         <span class="comment">// 获取上传服务器的地址</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 
-<p>当然，我这个项目表单项很多，如果每一项都用这个方法就有点得不偿失。所以我选择用vuex module来管理数据</p>
+<h2 id="刘海屏适配问题"><a href="#刘海屏适配问题" class="headerlink" title="刘海屏适配问题"></a>刘海屏适配问题</h2><p>在page.json去掉原生导航栏，用上自己封装好的导航栏，手机就会出现不适配问题，导航栏看不清。</p>
+<p>解决方式:</p>
+<p>在css里面添加样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx:<span class="built_in">var</span>(--status-bar-height); //是计算状态栏的高度</span><br></pre></td></tr></table></figure>
+
+<p>—暂时记录这么多</p>
 </div>
         </div>
         
@@ -261,7 +237,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/share/url_question/",
+                text: "http://example.com/share/uniapp_question/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -273,11 +249,12 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/share/url_question/";
-            const title         = "「encodeURIComponent遇到的问题」";
-            const excerpt       = `问题​		在做表单提交时项目经理反馈过来问题，说有时候提交不了。我当时觉得很奇怪，我本地是好的呀，怎么可能会提交不了呢，后来用了他给我的数据测试发现浏览器报错。 URIError: URI malformed
+            const hostUrl       = "http://example.com/share/uniapp_question/";
+            const title         = "「uniapp开发遇到的问题」";
+            const excerpt       = `base64格式问题​	用canvas会遇到保存图片的时候在h5上图片格式为base64
+​	下图为H5
 ​	
-原因和解决方法​	...`;
+而在app上uniapp会自动转换成uniapp自己的格式：_doc&#x2F;uniapp_temp_165715901...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -299,7 +276,7 @@
                     <a class="tag-none-link" href="/tags/%E9%97%AE%E9%A2%98/" rel="tag">问题</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-07-07T01:43:51.166Z" itemprop="dateModified">最后编辑：2022-07-07</time>
+                    <time datetime="2022-07-07T02:12:50.594Z" itemprop="dateModified">最后编辑：2022-07-07</time>
                 </div>
             </div>
         </footer>
@@ -308,13 +285,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" hello Hexo" href="/share/helloHexo/">&lt; 上一篇</a>
+                <a title=" three.js初体验" href="/study/study threejs1/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" three.js初体验" href="/study/study threejs1/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
@@ -382,7 +355,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">原因和解决方法</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#base64%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98"><span class="toc-text">base64格式问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%98%E6%B5%B7%E5%B1%8F%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98"><span class="toc-text">刘海屏适配问题</span></a></li></ol>
     </div>
 </aside>
                 
