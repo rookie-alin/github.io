@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="icon" href="/images/logo.ico">
   
-  <title>uniapp开发遇到的问题 | rookie-alin</title>
+  <title>vue使用jszip批量导出图片 | rookie-alin</title>
   <meta name="author" content="rookie-alin" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -14,20 +14,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="问题" />
+    <meta name="keywords" content="vue" />
   
-  <meta name="description" content="base64格式问题​	用canvas会遇到保存图片的时候在h5上图片格式为base64 ​	下图为H5 ​	 而在app上uniapp会自动转换成uniapp自己的格式：_doc&#x2F;uniapp_temp_1657159017379&#x2F;canvas&#x2F;16571590508290.png 解决方法: 1234567891011let path &#x3D; plus.io.conv">
+  <meta name="description" content="安装jszip和file-saver 12npm install jszip --savenpm i file-saver --save    导入插件12import &amp;#123; saveAs &amp;#125; from &amp;#x27;file-saver&amp;#x27;;import JSZip from &amp;#x27;jszip&amp;#x27;;    在项目中使用1  12345678910111213">
 <meta property="og:type" content="article">
-<meta property="og:title" content="uniapp开发遇到的问题">
-<meta property="og:url" content="http://example.com/share/uniapp_question/index.html">
+<meta property="og:title" content="vue使用jszip批量导出图片">
+<meta property="og:url" content="http://example.com/share/jszip_exportImg/index.html">
 <meta property="og:site_name" content="rookie-alin">
-<meta property="og:description" content="base64格式问题​	用canvas会遇到保存图片的时候在h5上图片格式为base64 ​	下图为H5 ​	 而在app上uniapp会自动转换成uniapp自己的格式：_doc&#x2F;uniapp_temp_1657159017379&#x2F;canvas&#x2F;16571590508290.png 解决方法: 1234567891011let path &#x3D; plus.io.conv">
+<meta property="og:description" content="安装jszip和file-saver 12npm install jszip --savenpm i file-saver --save    导入插件12import &amp;#123; saveAs &amp;#125; from &amp;#x27;file-saver&amp;#x27;;import JSZip from &amp;#x27;jszip&amp;#x27;;    在项目中使用1  12345678910111213">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/logo.ico">
-<meta property="article:published_time" content="2022-07-07T01:35:29.768Z">
-<meta property="article:modified_time" content="2022-07-08T09:48:44.791Z">
+<meta property="article:published_time" content="2020-10-27T01:38:54.841Z">
+<meta property="article:modified_time" content="2022-07-27T02:04:21.906Z">
 <meta property="article:author" content="rookie-alin">
-<meta property="article:tag" content="问题">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/logo.ico">
   
@@ -135,15 +135,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://example.com/share/uniapp_question/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/share/jszip_exportImg/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">uniapp开发遇到的问题</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">vue使用jszip批量导出图片</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2022-07-07T01:35:29.768Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-07-07</time></li>
+                <li><time datetime="2020-10-27T01:38:54.841Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2020-10-27</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">rookie-alin</span>
                 </li>
@@ -151,7 +151,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        1358
+                        ~1.84K
                     
                     字
                 </li>
@@ -162,37 +162,27 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1657273724791"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1658887461906"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#base64%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">base64格式问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%98%E6%B5%B7%E5%B1%8F%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">刘海屏适配问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99"><span class="toc-number">3.</span> <span class="toc-text">app打包报错</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85jszip%E5%92%8Cfile-saver"><span class="toc-number">1.</span> <span class="toc-text">安装jszip和file-saver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E6%8F%92%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">导入插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">在项目中使用</span></a></li></ol>
                 </div>
             
             <hr />
-            <div itemprop="articleBody"><h2 id="base64格式问题"><a href="#base64格式问题" class="headerlink" title="base64格式问题"></a>base64格式问题</h2><p>​	用canvas会遇到保存图片的时候在h5上图片格式为base64</p>
-<p>​	下图为H5</p>
-<p>​	<img src="/../../images/uni_base.png"></p>
-<p>而在app上uniapp会自动转换成uniapp自己的格式：_doc&#x2F;uniapp_temp_1657159017379&#x2F;canvas&#x2F;16571590508290.png</p>
-<p>解决方法:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> path = plus.<span class="property">io</span>.<span class="title function_">convertLocalFileSystemURL</span>(res); </span><br><span class="line"> <span class="variable language_">this</span>.<span class="property">url</span> =  <span class="string">&#x27;file://&#x27;</span>+  path </span><br><span class="line"> uni.<span class="title function_">uploadFile</span>(&#123;</span><br><span class="line">     <span class="attr">url</span>: <span class="string">&#x27;上传文件接口&#x27;</span>, </span><br><span class="line">      <span class="attr">filePath</span>:  <span class="variable language_">this</span>.<span class="property">url</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;file&#x27;</span>,</span><br><span class="line">      <span class="attr">success</span>: <span class="function">(<span class="params">uploadFileRes</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(uploadFileRes.<span class="property">data</span>);</span><br><span class="line">         <span class="comment">// 获取上传服务器的地址</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+            <div itemprop="articleBody"><h2 id="安装jszip和file-saver"><a href="#安装jszip和file-saver" class="headerlink" title="安装jszip和file-saver"></a>安装jszip和file-saver</h2> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install jszip --save</span><br><span class="line">npm i file-saver --save</span><br></pre></td></tr></table></figure>
 
-<h2 id="刘海屏适配问题"><a href="#刘海屏适配问题" class="headerlink" title="刘海屏适配问题"></a>刘海屏适配问题</h2><p>在page.json去掉原生导航栏，用上自己封装好的导航栏，手机就会出现不适配问题，导航栏看不清。</p>
-<p>解决方式:</p>
-<p>在css里面添加样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx:<span class="built_in">var</span>(--status-bar-height); //是计算状态栏的高度</span><br></pre></td></tr></table></figure>
 
-<h2 id="app打包报错"><a href="#app打包报错" class="headerlink" title="app打包报错"></a>app打包报错</h2><p>类型: Android自有证书    打包失败    错误日志: </p>
-<p>Error code &#x3D; -5200<br>Error message:<br>uni原生插件 JG-JPush 配置不正确，请联系插件作者<br>invalid &quot;parameters&quot; in manifest.json<br>JPUSH_HONOR_APPID</p>
-<p>原因及解决方式:</p>
-<p>​	项目用到了极光推送,之前打包的时候一直都是ok的，今天(2022-7-8)突然报这个错。</p>
-<p>解决方式:</p>
-<p>在mainfest.json中增加配置.</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;JG-JPush&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;JPUSH_HONOR_APPID&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"> <span class="attr">&quot;parameters&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">     <span class="attr">&quot;JPUSH_HONOR_APPID&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                            <span class="attr">&quot;des&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;厂商HUAWEI-appId,示例：appid=12346578&quot;</span><span class="punctuation">,</span></span><br><span class="line">                            <span class="attr">&quot;key&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;com.huawei.hms.client.appid&quot;</span><span class="punctuation">,</span></span><br><span class="line">                            <span class="attr">&quot;value&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">                   <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p>目前的解决方法就是这样。添加完配置后打包就不会报错了</p>
-<p>—暂时记录这么多</p>
+<h2 id="导入插件"><a href="#导入插件" class="headerlink" title="导入插件"></a>导入插件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; saveAs &#125; <span class="keyword">from</span> <span class="string">&#x27;file-saver&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">JSZip</span> <span class="keyword">from</span> <span class="string">&#x27;jszip&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="在项目中使用"><a href="#在项目中使用" class="headerlink" title="在项目中使用"></a>在项目中使用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="title function_">mounted</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="comment">//例如你的图片数组是</span></span><br><span class="line">    <span class="keyword">let</span> arr=[&#123;<span class="attr">fileName</span>:<span class="string">&#x27;xxx&#x27;</span>,<span class="attr">url</span>:<span class="string">&#x27;https://xxxx&#x27;</span>&#125;,&#123;xxx&#125;];</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="attr">methods</span>:&#123;</span><br><span class="line">    <span class="title function_">zip</span>(<span class="params">arr</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> zip=<span class="keyword">new</span> <span class="title class_">JSzip</span>(); <span class="comment">//创建jszip实列</span></span><br><span class="line">        <span class="keyword">let</span> folder=zip.<span class="title function_">folder</span>(<span class="string">&#x27;文件夹名字&#x27;</span>); <span class="comment">//zip.folder.folder可嵌套文件夹</span></span><br><span class="line">        <span class="comment">//循环数组</span></span><br><span class="line">        arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">pic</span>=&gt;</span>&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="title function_">getBase64</span>(pic.<span class="property">url</span>).<span class="title function_">then</span>(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">                base64=res.<span class="title function_">split</span>(<span class="string">&#x27;base64,&#x27;</span>)[<span class="number">1</span>];</span><br><span class="line">                folder.<span class="title function_">file</span>(pic.<span class="property">name</span>+<span class="string">&#x27;png&#x27;</span>,base64,&#123;<span class="attr">base64</span>:<span class="literal">true</span>&#125;)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">        zip.<span class="title function_">generateAsync</span>(&#123; <span class="attr">type</span>: <span class="string">&quot;blob&quot;</span> &#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">blob</span>) =&gt;</span> &#123;</span><br><span class="line">                    <span class="title function_">saveAs</span>(blob, <span class="string">&quot;压缩包名字.zip&quot;</span>)<span class="comment">//自定义文件压缩包名字</span></span><br><span class="line">                &#125;)     </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">//传入图片地址，返回base64格式数据</span></span><br><span class="line">       <span class="title function_">getBase64</span>(<span class="params">img</span>)&#123;</span><br><span class="line">          <span class="keyword">var</span> image = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">          image.<span class="property">crossOrigin</span> = <span class="string">&#x27;*&#x27;</span>;<span class="comment">//解决图片跨域问题</span></span><br><span class="line">          image.<span class="property">src</span> = img;</span><br><span class="line">		  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">            image.<span class="property">onload</span> = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">              <span class="title function_">resolve</span>(<span class="variable language_">this</span>.<span class="title function_">getBase64Image</span>(image));</span><br><span class="line">            &#125;</span><br><span class="line">		  &#125;) </span><br><span class="line">       &#125;</span><br><span class="line">    <span class="comment">//创建画布，将图片渲染到画布上，再将画布转为base64格式数据返回出来</span></span><br><span class="line">	<span class="title function_">getBase64Image</span>(<span class="params">img,width,height</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> canvas = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;canvas&quot;</span>);</span><br><span class="line">            canvas.<span class="property">width</span> = width ? width : img.<span class="property">width</span>;</span><br><span class="line">            canvas.<span class="property">height</span> = height ? height : img.<span class="property">height</span>;</span><br><span class="line">            <span class="keyword">var</span> ctx = canvas.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>);</span><br><span class="line">            ctx.<span class="title function_">drawImage</span>(img, <span class="number">0</span>, <span class="number">0</span>, canvas.<span class="property">width</span>, canvas.<span class="property">height</span>);</span><br><span class="line">            <span class="keyword">var</span> dataURL = canvas.<span class="title function_">toDataURL</span>();</span><br><span class="line">            <span class="keyword">return</span> dataURL;	</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 </div>
         </div>
         
@@ -246,7 +236,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/share/uniapp_question/",
+                text: "http://example.com/share/jszip_exportImg/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -258,12 +248,13 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/share/uniapp_question/";
-            const title         = "「uniapp开发遇到的问题」";
-            const excerpt       = `base64格式问题​	用canvas会遇到保存图片的时候在h5上图片格式为base64
-​	下图为H5
-​	
-而在app上uniapp会自动转换成uniapp自己的格式：_doc&#x2F;uniapp_temp_165715901...`;
+            const hostUrl       = "http://example.com/share/jszip_exportImg/";
+            const title         = "「vue使用jszip批量导出图片」";
+            const excerpt       = `安装jszip和file-saver 12npm install jszip --savenpm i file-saver --save
+
+
+
+导入插件12import &#123; saveAs &#125; from &#x27;...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -282,10 +273,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/%E9%97%AE%E9%A2%98/" rel="tag">问题</a>
+                    <a class="tag-none-link" href="/tags/vue/" rel="tag">vue</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-07-08T09:48:44.791Z" itemprop="dateModified">最后编辑：2022-07-08</time>
+                    <time datetime="2022-07-27T02:04:21.906Z" itemprop="dateModified">最后编辑：2022-07-27</time>
                 </div>
             </div>
         </footer>
@@ -293,10 +284,10 @@
     
         <nav class="navigation post-navigation clearfix" role="navigation">
             
-            <div class="nav-previous clearfix">
-                <a title=" three.js初体验" href="/study/study threejs1/">&lt; 上一篇</a>
-            </div>
             
+            <div class="nav-next clearfix">
+                <a title=" hello Hexo" href="/share/helloHexo/">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
@@ -364,7 +355,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#base64%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98"><span class="toc-text">base64格式问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%98%E6%B5%B7%E5%B1%8F%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98"><span class="toc-text">刘海屏适配问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99"><span class="toc-text">app打包报错</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85jszip%E5%92%8Cfile-saver"><span class="toc-text">安装jszip和file-saver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E6%8F%92%E4%BB%B6"><span class="toc-text">导入插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-text">在项目中使用</span></a></li></ol>
     </div>
 </aside>
                 
